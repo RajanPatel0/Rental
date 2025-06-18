@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -10,21 +11,28 @@ const Hero = () => {
         </h1>
         <p className="text-gray-400 text-lg">We do a thorough assessment of the property to get the lowest price</p>
 
-        <div className="bg-white rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center text-black shadow-lg max-w-xl">
+        <div className="bg-white rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center text-black shadow-lg max-w mr-7">
           <select className="p-2 border border-gray-300 rounded-md w-full md:w-auto">
-            <option>Villa</option>
+            <option>Resident</option>
+            <option>Commercials</option>
+            <option>Bungalows</option>
+            <option>Apartments</option>
+            <option>Farmhouses</option>
           </select>
           <select className="p-2 border border-gray-300 rounded-md w-full md:w-auto">
             <option>Rent</option>
+            <option>Purchase</option>
           </select>
           <input
             type="text"
             className="p-2 border border-gray-300 rounded-md w-full md:w-auto"
             placeholder="1000–2000"
           />
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md">
+          <Link to="/property">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md">
             Search
           </button>
+          </Link>
         </div>
       </div>
 

@@ -4,11 +4,14 @@ import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import ContactPage from "./pages/ContactPage"
+import PropertyPage from "./pages/PropertyPage";
 
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 
-
+import ScrollToTop from "./components/ScrollToTop";
+import PropertyDetailPage from "./pages/PropertyDetailPage";
+import { DiscussPropertyPage } from "./pages/DiscussPropertyPage";
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
 
       {/* Navbar is sticky and always visible */}
       <Navbar />
+      <ScrollToTop />
 
       {/* Page Content */}
       <div className="relative z-40">
@@ -31,7 +35,9 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<ContactPage />} />
-          
+          <Route path='/property' element={<PropertyPage />} />
+          <Route exact path="/property/:id" element={<PropertyDetailPage />} />
+          <Route exact path="/discuss-property" element={<DiscussPropertyPage />} />
         </Routes>
       </div>
     </div>

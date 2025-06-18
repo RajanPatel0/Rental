@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { FaHome, FaInfoCircle, FaEnvelope, FaUserPlus, FaSignInAlt } from 'react-icons/fa';
+import {
+  FaHome,
+  FaInfoCircle,
+  FaEnvelope,
+  FaUserPlus,
+  FaSignInAlt,
+  FaBuilding, // Added icon for Property
+} from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +18,11 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-6 py-4 md:px-10">
         {/* Logo */}
         <div className="text-2xl font-bold">
+          <Link to="/">
+          
           <span className="text-blue-400">homo</span>deal
+        
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -19,6 +30,10 @@ const Navbar = () => {
           <li className="cursor-pointer hover:text-blue-400 flex items-center gap-2">
             <FaHome className="text-blue-400" />
             <Link to="/">Home</Link>
+          </li>
+          <li className="cursor-pointer hover:text-blue-400 flex items-center gap-2">
+            <FaBuilding className="text-blue-400" />
+            <Link to="/property">Property</Link>
           </li>
           <li className="cursor-pointer hover:text-blue-400 flex items-center gap-2">
             <FaInfoCircle className="text-blue-400" />
@@ -60,6 +75,10 @@ const Navbar = () => {
           <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-blue-400 flex items-center gap-2">
             <FaHome className="text-blue-400" />
             Home
+          </Link>
+          <Link to="/property" onClick={() => setIsOpen(false)} className="hover:text-blue-400 flex items-center gap-2">
+            <FaBuilding className="text-blue-400" />
+            Property
           </Link>
           <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-blue-400 flex items-center gap-2">
             <FaInfoCircle className="text-blue-400" />

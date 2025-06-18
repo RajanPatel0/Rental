@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHome, FaInfoCircle, FaPhoneAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -26,7 +27,9 @@ const About = () => {
           </p>
           <div className="flex space-x-4">
             <button className="bg-blue-500 hover:bg-blue-600 px-5 py-3 rounded-lg font-semibold transition">Learn More</button>
-            <button className="bg-white text-black hover:bg-gray-200 px-5 py-3 rounded-lg font-semibold transition">Browse Properties</button>
+            <Link to="/property">
+                        <button className="bg-white text-black hover:bg-gray-200 px-5 py-3 rounded-lg font-semibold transition">Browse Properties</button>
+            </Link>
           </div>
         </div>
 

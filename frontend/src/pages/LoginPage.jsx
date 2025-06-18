@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 
 const LoginPage = () => {
@@ -36,7 +38,8 @@ const LoginPage = () => {
             type="submit"
             className="w-full py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold hover:scale-[1.01] hover:shadow-md transition-transform"
           >
-            Login
+            <Link to="/">Login
+            </Link>            
           </button>
         </form>
 

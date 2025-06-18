@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 import { FaUser, FaPhone, FaEnvelope, FaLock } from 'react-icons/fa';
 
 const SignUpPage = () => {
@@ -58,7 +60,9 @@ const SignUpPage = () => {
             type="submit"
             className="w-full py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold hover:scale-[1.01] hover:shadow-md transition-transform"
           >
+            <Link to="/">    
             Sign Up
+            </Link>
           </button>
         </form>
 
